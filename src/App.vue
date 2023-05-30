@@ -1,8 +1,9 @@
 <script>
 
 import AppHeader from './components/AppHeader.vue';
-import AppFooter from './components/AppFooter.vue';
-import AppMain from './components/AppMain.vue';
+// import AppFooter from './components/AppFooter.vue';
+// import AppMain from './components/AppMain.vue';
+import AppHome from "./pages/AppHome.vue";
 
 export default {
     name: "App",
@@ -10,9 +11,10 @@ export default {
         return {};
     },
     components: { 
-      AppMain,
       AppHeader,
-      AppFooter,
+      // AppMain,
+      // AppFooter,
+      AppHome,
     }
 }
 
@@ -21,8 +23,9 @@ export default {
 
 <template>
   <AppHeader></AppHeader>
-  <AppMain></AppMain>
-  <AppFooter></AppFooter>
+  <router-view></router-view>
+  <!-- <AppMain></AppMain>
+  <AppFooter></AppFooter> -->
 </template>
 
 <style scoped>
