@@ -11,6 +11,15 @@ export default {
     mounted() {
         console.log(this.$route);
         this.projectSlug = this.route.params.slug;
+        console.log(this.projectSlug);
+        this.cercaProgetto;
+    },
+
+    methods: {
+        cercaProgetto() {
+            console.log("http://127.0.0.1:8000/api/projects/" + this.projectSlug);
+            // axios.get("http://127.0.0.1:8000/api/projects/" + this.projectSlug)
+        }
     }
 }
 </script>

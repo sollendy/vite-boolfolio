@@ -50,7 +50,7 @@ export default {
           <p class="card-text"> {{ stringiContent }} </p>
 
           <div class="text-center">
-            <router-link to="" class="btn btn-outline-primary">Vedi</router-link>
+            <router-link :to="{name: 'projects.show', params: {slug: project.slug}}" class="btn btn-outline-primary">Vedi</router-link>
           </div>
           <!-- <a href="#" class="btn btn-primary">Vadi altrove</a> -->
     
