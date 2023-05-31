@@ -1,24 +1,30 @@
 <script>
+import axios from 'axios';
+
 export default {
     name: "ProgettoSolo",
 
     data() {
         return {
-            projectSlug: ''
+            projectSlug: '',
         }
     },
 
     mounted() {
-        console.log(this.$route);
-        this.projectSlug = this.route.params.slug;
-        console.log(this.projectSlug);
+        // console.log(this.$route);
+        this.projectSlug = this.$route.params.slug;
+        // console.log(this.projectSlug);
         this.cercaProgetto;
     },
 
     methods: {
         cercaProgetto() {
-            console.log("http://127.0.0.1:8000/api/projects/" + this.projectSlug);
-            // axios.get("http://127.0.0.1:8000/api/projects/" + this.projectSlug)
+            // console.log("http://127.0.0.1:8000/api/projects/" + this.projectSlug);
+            axios.get("http://127.0.0.1:8000/api/projects/" + this.projectSlug).then(response => {
+
+                console.log('progetto:', response);
+                
+            });
         }
     }
 }
