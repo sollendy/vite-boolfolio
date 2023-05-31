@@ -6,6 +6,8 @@ export default {
 
     data() {
         return {
+            project: [],
+
             projectSlug: '',
         }
     },
@@ -14,7 +16,7 @@ export default {
         // console.log(this.$route);
         this.projectSlug = this.$route.params.slug;
         // console.log(this.projectSlug);
-        this.cercaProgetto;
+        this.cercaProgetto();
     },
 
     methods: {
@@ -23,7 +25,8 @@ export default {
             axios.get("http://127.0.0.1:8000/api/projects/" + this.projectSlug).then(response => {
 
                 console.log('progetto:', response);
-                
+                this.project = response.data.project;
+
             });
         }
     }
