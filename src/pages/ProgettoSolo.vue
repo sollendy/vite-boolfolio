@@ -35,8 +35,7 @@ export default {
 
 <template>
 <div class="container">
-    <h1>sono un progetto</h1>
-    {{ $route.params.slug }}
+    <h1>{{ project.title }}</h1>
 </div>
 </template>
 
