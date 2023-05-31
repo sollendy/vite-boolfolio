@@ -63,7 +63,7 @@ export default {
         <span class="visually-hidden">Attendere prego...</span>
     </div>
 </div>
-<div v-else class="container">
+<div v-else class="container text-center">
     <div v-if="progettoEsiste">
 
         <div class="immagine">
