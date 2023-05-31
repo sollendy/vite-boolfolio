@@ -71,10 +71,16 @@ export default {
         </div>
 
         <h1>{{ project.title }}</h1>
-        <hr>
-        <p>
-          {{ project.content }}
-        </p>
+        <div class="tecnologie">
+            <span v-for="technology in project.technologies" class="badge rounded-pill bg-dark m-1">{{technology.name}}</span>
+        </div>
+        <h4>
+        {{ project.type ? project.type.name : 'Nessuna categoria' }}
+        </h4>
+            <hr>
+            <p>
+              {{ project.content }}
+            </p>
 
     </div>
     <div v-else>
